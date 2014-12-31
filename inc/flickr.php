@@ -1,14 +1,19 @@
 <?php
+
+// SIMPLE GET AND CACHE PHOTOSTREAM FOR USER
+
 include('keys.php');
 
 error_reporting( 0 ); // don't let any php errors ruin the feed
-$user_id = "549060201";
-$feed = "https://api.instagram.com/v1/users/".$user_id."/media/recent/?access_token=".$instagramToken;
-$cache_file = dirname(__FILE__).'/cache/'.'instagram-cache';
+
+$user_id = '8466254%40N03';
+$per_page = 100;
+$feed = "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPhotos&api_key=".$flickrKey."&user_id=".$user_id."&per_page=".$per_page."&format=json&nojsoncallback=1";
+$cache_file = dirname(__FILE__).'/cache/'.'flickr-cache';
 $modified = filemtime( $cache_file );
 $now = time();
 // $interval = 60; // one minutes
-$interval = 600; // ten minutes
+$interval = 900; // fifteen minutes
 
 // check the cache file
 if ( !$modified || ( ( $now - $modified ) > $interval ) ) {
