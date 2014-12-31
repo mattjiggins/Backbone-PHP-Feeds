@@ -2,8 +2,8 @@
 include('keys.php');
 
 error_reporting( 0 ); // don't let any php errors ruin the feed
-
-$feed = "https://api.instagram.com/v1/users/1002283763/media/recent/?access_token=".$instagramToken;
+$user_id = "549060201";
+$feed = "https://api.instagram.com/v1/users/".$user_id."/media/recent/?access_token=".$instagramToken;
 $cache_file = dirname(__FILE__).'/cache/'.'instagram-cache';
 $modified = filemtime( $cache_file );
 $now = time();

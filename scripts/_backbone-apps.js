@@ -15,6 +15,11 @@ BackboneChowFront = Backbone.Router.extend({
 		var $twitterContainer = $('#app-twitterfeed');
 		$twitterContainer.empty();
 		$twitterContainer.append(this.twitterView.render().el);
+		
+		// console.log ("Flickr App Starting");
+		// var $flickrContainer = $('#app-flickrfeed');
+		// $flickrContainer.empty();
+		// $flickrContainer.append(this.flickrView.render().el);
 
 		// console.log ("Instagram App Starting");
 		var $instagramContainer = $('#app-instagramfeed');

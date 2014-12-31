@@ -2,4 +2,4 @@
 /inc/keys.php
 .DS_Store
 config.codekit
-.sass-cache/*
+styles/sass/.sass-cache/*

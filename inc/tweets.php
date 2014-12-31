@@ -4,7 +4,7 @@ include('keys.php');
 
 error_reporting( 0 ); // don't let any php errors ruin the feed
 
-$username = 'oliviachow';
+$username = 'mattjiggins';
 $number_tweets = 15;
 $feed = "https://api.twitter.com/1.1/statuses/user_timeline.json?screen_name={$username}&count={$number_tweets}&include_rts=1";
 $cache_file = dirname(__FILE__).'/cache/'.'twitter-cache';
