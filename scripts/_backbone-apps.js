@@ -1,4 +1,4 @@
-BackboneChowFront = Backbone.Router.extend({
+BackboneSocialFeeds = Backbone.Router.extend({
 	routes: {
 		'':'start'
 	},
@@ -6,6 +6,11 @@ BackboneChowFront = Backbone.Router.extend({
 		this.twitterView = new TweetView({
 			collection: tweets
 		});
+		
+		this.photosView = new PhotosView({
+			collection: photos
+		});
+		
 		this.instagramView = new InstagramsView({
 			collection: instagrams
 		});
@@ -17,9 +22,9 @@ BackboneChowFront = Backbone.Router.extend({
 		$twitterContainer.append(this.twitterView.render().el);
 		
 		// console.log ("Flickr App Starting");
-		// var $flickrContainer = $('#app-flickrfeed');
-		// $flickrContainer.empty();
-		// $flickrContainer.append(this.flickrView.render().el);
+		var $flickrContainer = $('#app-flickrfeed');
+		$flickrContainer.empty();
+		$flickrContainer.append(this.photosView.render().el);
 
 		// console.log ("Instagram App Starting");
 		var $instagramContainer = $('#app-instagramfeed');
