@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Olivia Chow</title>
+	
+<!-- Google Site -->	
+	<meta name="google-site-verification" content="KX1-V6oO8nsta5NQLs89arl2o0gwxdwDj4urw_RK-lQ"/>
+
+<!-- Twitter -->
+	<meta name="twitter:card" value="">
+	<meta name="twitter:site" content="@oliviachow">
+	<meta name="twitter:title" content="Olivia Chow">
+	<meta name="twitter:creator" content="@oliviachow">
+
+<!-- Open Graph -->
+	<meta property="og:title" content="Olivia Chow" />
+	<meta property="og:url" content="http://www.oliviachow.ca/" />
+	<meta property="og:image" content="http://chow.jiggins.ca/images/bookCover-web.jpg" />
+	<meta property="og:description" content="" />
+
+<!-- Icons -->
+	<link rel="icon" type="image/png" href="images/icon-36.png">
+	<link rel="apple-touch-icon" href="images/icon-36.png">
+	<link rel="apple-touch-icon" sizes="72x72" href="images/icon-72.png">
+	<link rel="apple-touch-icon" sizes="192x192" href="images/icon-192.png">
+
+<!-- Styles -->
+	<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/css/bootstrap.min.css" rel="stylesheet">
+	<link href="//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css" rel="stylesheet">
+	<link href="styles/css/application.css?v=301214-2251" rel="stylesheet" type="text/css" media="screen">
+
+<!-- TypeKit Goodness -->
+	<script src="//use.typekit.net/oau0xfl.js"></script>
+	<script>try{Typekit.load();}catch(e){}</script>
+	
+	<!--[if lt IE 9]>
+		<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+		<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+	<![endif]-->
+</head>
+<body>
+
+<h2>Twitter</h2>
+<div id="app-twitterfeed">Loading Twitter</div>
+
+<h2>Flickr</h2>
+<div id="app-flickrfeed">Loading Flickr</div>
+
+<h2>Instagram</h2>
+<div id="app-instagramfeed">Loading Instagrams</div>
+
+
+
+<script id="app-tweets" type="text/x-handlebars-template">
+	<div class="tweet">
+		<p>{{{formatTweet text}}} &mdash; <small>{{dateFormat created_at}}</small> <a href="http://twitter.com/{{user.screen_name}}/status/{{id_str}}" class="action"><i class="fa fa-retweet"></i></a> </p>
+	</div>
+</script>
+
+
+<script id="app-instagram-all" type="text/x-handlebars-template">		
+	
+</script>
+<script id="app-instagram-gram" type="text/x-handlebars-template">		
+	<div class="gram">
+		<div class="col-xs-4 col-lg-3">
+			<a href="{{link}}" target="_blank" class="thumbnail">
+				<img src="{{images.low_resolution.url}}" alt="{{caption.text}}" class="img-responsive" />
+			</a>
+		</div>
+	</div>
+</script>	
+
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js" type="text/javascript"></script>
+	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.1/js/bootstrap.min.js" type="text/javascript"></script>
+
+	<script src="/scripts/min/application-min.js" type="text/javascript"></script>
+
+	<script type="text/javascript">
+		$(document).ready(function() {
+		    app = new BackboneChowFront();
+			tweets.fetch({ reset: true });
+			instagrams.fetch({ reset: true });
+		    Backbone.history.start({pushState: false});	
+		});
+	</script>
+
+		</div> <!-- /content -->
+		
+		
+<!-- Google Analytics -->
+	<script type="text/javascript">
+		var _gaq = _gaq || [];
+		_gaq.push(['_setAccount', 'UA-48924900-1']);
+		_gaq.push(['_setDomainName', 'none']);
+		_gaq.push(['_setAllowLinker', true]);
+		_gaq.push(['_setCustomVar', 1, 'UGC', 'false', 3]);
+		_gaq.push(['_setCustomVar', 1, 'Page type', 'Basic', 3]);
+		_gaq.push(['_trackPageview']);
+		_gaq.push(['_trackPageLoadTime']);
+
+		(function() {
+			var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+			ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+			var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+		})();
+	</script>
+		
+</body>
+</html>
