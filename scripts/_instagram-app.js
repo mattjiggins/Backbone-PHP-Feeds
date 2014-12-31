@@ -17,7 +17,7 @@ instagrams = new InstagramsCollection([
 InstagramsView = Backbone.View.extend({		
 	className: 'instagrams',
 
-	template: Handlebars.compile($("#app-instagram-gram").html()),
+	template: Handlebars.compile($("#app-instagram").html()),
 
     initialize:function (e) {
 		this.listenTo(this.collection,'reset', this.renderList);
