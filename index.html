@@ -38,19 +38,28 @@
 	<![endif]-->
 </head>
 <body>
-
-<h2>Twitter</h2>
+<div class="container">
+	<h2>Twitter</h2>
 	<div id="app-twitterfeed">Loading Twitter</div>
 
 	<h2>Flickr</h2>
-	<div id="app-flickrfeed">Loading Flickr</div>
+	<div class="row">
+		<div id="app-flickrfeed">Loading Flickr</div>
+	</div>
 
 	<h2>Instagram</h2>
-	<div id="app-instagramfeed">Loading Instagrams</div>
+	<div class="row">
+		<div id="app-instagramfeed">Loading Instagrams</div>
+	</div>
+</div>
+
+	
 
 
 	<script id="app-flickr" type="text/x-handlebars-template">
-		<img src="https://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_s.jpg" alt="">
+		<a href="https://www.flickr.com/photos/{{owner}}/{{id}}" class="thumbnail col-xs-1"  target="_blank">
+			<img src="https://farm{{farm}}.staticflickr.com/{{server}}/{{id}}_{{secret}}_s.jpg" alt="{{title}}">
+		</a>
 	</script>
 
 
@@ -61,7 +70,7 @@
 	</script>
 
 	<script id="app-instagram" type="text/x-handlebars-template">		
-		<a href="{{link}}" target="_blank">
+		<a href="{{link}}" class="thumbnail col-xs-1" target="_blank">
 			<img src="{{images.low_resolution.url}}" alt="{{caption.text}}" class="img-responsive" />
 		</a>
 	</script>	

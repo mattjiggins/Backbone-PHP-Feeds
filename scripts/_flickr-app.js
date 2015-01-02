@@ -8,7 +8,6 @@ PhotosCollection = Backbone.Collection.extend({
 });
 
 photos = new PhotosCollection([
-  // Bootstrap all the records for all the pages here 
 ], { mode: "client" });
 
 // VIEWS

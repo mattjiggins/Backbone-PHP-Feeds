@@ -8,7 +8,6 @@ TweetsCollection = Backbone.Collection.extend({
 });
 
 tweets = new TweetsCollection([
-  // Bootstrap all the records for all the pages here
 ], { mode: "client" });
 
 // VIEWS

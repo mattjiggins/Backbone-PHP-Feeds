@@ -4,7 +4,7 @@
 
 include('keys.php');
 
-error_reporting( 0 ); // don't let any php errors ruin the feed
+error_reporting( 0 );
 
 $user_id = '8466254%40N03';
 $per_page = 100;
@@ -12,7 +12,6 @@ $feed = "https://api.flickr.com/services/rest/?method=flickr.people.getPublicPho
 $cache_file = dirname(__FILE__).'/cache/'.'flickr-cache';
 $modified = filemtime( $cache_file );
 $now = time();
-// $interval = 60; // one minutes
 $interval = 900; // fifteen minutes
 
 // check the cache file

@@ -1,13 +1,13 @@
 <?php
 include('keys.php');
 
-error_reporting( 0 ); // don't let any php errors ruin the feed
+error_reporting( 0 );
+
 $user_id = "549060201";
 $feed = "https://api.instagram.com/v1/users/".$user_id."/media/recent/?access_token=".$instagramToken;
 $cache_file = dirname(__FILE__).'/cache/'.'instagram-cache';
 $modified = filemtime( $cache_file );
 $now = time();
-// $interval = 60; // one minutes
 $interval = 600; // ten minutes
 
 // check the cache file
